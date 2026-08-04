@@ -1,13 +1,8 @@
-import { ctaSection as staticCtaSection } from "@/data/site";
-import { Container } from "../ui/container";
+import { ctaSection } from "@/data/site";
 import { Button } from "../ui/button";
+import { Container } from "../ui/container";
 
-interface CtaProps {
-    data?: { eyebrow?: string; title?: string; text?: string; cta?: string } | null;
-}
-
-export function Cta({ data }: CtaProps) {
-    const section = data ?? staticCtaSection;
+export function Cta() {
     return (
         <section className="py-20 sm:py-24">
             <Container>
@@ -15,17 +10,17 @@ export function Cta({ data }: CtaProps) {
                     <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                         <div className="space-y-4">
                             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-                                {section.eyebrow}
+                                {ctaSection.eyebrow}
                             </p>
                             <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-background sm:text-4xl">
-                                {section.title}
+                                {ctaSection.title}
                             </h2>
                             <p className="max-w-2xl text-base leading-8 text-background/70">
-                                {section.text}
+                                {ctaSection.text}
                             </p>
                         </div>
                         <Button size="lg" className="px-6 text-base">
-                            {section.cta}
+                            {ctaSection.cta}
                         </Button>
                     </div>
                 </div>

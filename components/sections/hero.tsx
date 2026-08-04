@@ -1,21 +1,12 @@
-'use client';
-
-import { benefits as staticBenefits, hero as staticHero } from "@/data/site";
 import { heroImage } from "@/data/images";
+import { benefits, hero } from "@/data/site";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 import { Container } from "../ui/container";
 import { ThemeImage } from "../ui/theme-image";
 
-interface HeroProps {
-    data?: typeof staticHero | null;
-    benefits?: string[] | null;
-}
-
-export function Hero({ data, benefits }: HeroProps) {
-    const hero = data ?? staticHero;
-    const benefitsList = benefits ?? staticBenefits;
+export function Hero() {
     return (
         <section className="relative min-h-[calc(100vh-4rem)] lg:h-[calc(100vh-4rem)] overflow-hidden border-b border-border">
             <ThemeImage
@@ -53,7 +44,7 @@ export function Hero({ data, benefits }: HeroProps) {
                         </a>
                     </div>
                     <div className="flex flex-col gap-3 md:flex-row justify-between">
-                        {benefitsList.map((item) => (
+                        {benefits.map((item) => (
                             <div key={item} className="flex items-center gap-3 border-l-2 border-l-primary border border-border bg-background/80 px-4 py-3 shadow-sm backdrop-blur">
                                 <CheckCircle2 className="h-5 w-5 text-primary" />
                                 <span className="text-sm font-medium text-muted-foreground">{item}</span>

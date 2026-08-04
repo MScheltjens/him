@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { unsplashUrl, type SiteImage } from "@/data/images";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface ThemeImageProps {
     image: SiteImage;

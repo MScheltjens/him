@@ -1,14 +1,9 @@
-import { intro as staticIntro } from "@/data/site";
+import { intro } from "@/data/site";
 import { Card, CardContent } from "../ui/card";
 import { Container } from "../ui/container";
 import { SectionHeading } from "../ui/section-heading";
 
-interface IntroProps {
-    data?: typeof staticIntro | null;
-}
-
-export function Intro({ data }: IntroProps) {
-    const intro = data ?? staticIntro;
+export function Intro() {
     return (
         <section id="ueber-uns" className="scroll-mt-16 py-20 sm:py-24">
             <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">

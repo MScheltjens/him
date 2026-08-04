@@ -1,22 +1,17 @@
 import { galleryImages } from "@/data/images";
-import { gallerySection as staticGallerySection } from "@/data/site";
+import { gallerySection } from "@/data/site";
 import { Container } from "../ui/container";
 import { SectionHeading } from "../ui/section-heading";
 import { ThemeImage } from "../ui/theme-image";
 
-interface GalleryProps {
-    heading?: { eyebrow?: string; title?: string; text?: string } | null;
-}
-
-export function Gallery({ heading }: GalleryProps) {
-    const section = heading ?? staticGallerySection;
+export function Gallery() {
     return (
         <section id="referenzen" className="scroll-mt-16 py-20 sm:py-24">
             <Container className="space-y-10">
                 <SectionHeading
-                    eyebrow={section.eyebrow}
-                    title={section.title}
-                    text={section.text}
+                    eyebrow={gallerySection.eyebrow}
+                    title={gallerySection.title}
+                    text={gallerySection.text}
                 />
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     {galleryImages.map((image) => (

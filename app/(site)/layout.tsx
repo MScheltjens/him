@@ -1,10 +1,9 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Inter } from "next/font/google";
-import { getSiteSettings } from "@/lib/sanity/queries";
 
+import type { Metadata } from "next";
 import "../globals.css";
-import { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,14 +16,11 @@ export const metadata: Metadata = {
   description: "Technische Reinigung, Zuarbeit im Maschinenbau und Transportarbeiten auf Schiffswerften im Großraum Hamburg.",
 };
 
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const settings = await getSiteSettings();
-
   return (
     <html
       lang="de"
@@ -34,9 +30,9 @@ export default async function RootLayout({
 
       <body className={`${inter.className} min-h-full flex flex-col`}>
 
-        <Header settings={settings} />
+        <Header />
         {children}
-        <Footer settings={settings} />
+        <Footer />
       </body>
     </html>
   );

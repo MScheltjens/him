@@ -1,5 +1,5 @@
-import { Ship } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Ship } from "lucide-react";
 
 interface LogoMarkProps {
     name: string;

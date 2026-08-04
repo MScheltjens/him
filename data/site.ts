@@ -1,4 +1,4 @@
-import { Factory, Wrench, Truck, Phone, MapPin, Mail, HardHat } from "lucide-react";
+import { Factory, HardHat, Mail, MapPin, Phone, Truck, Wrench } from "lucide-react";
 
 export const site = {
     name: "HIM Schneider",
@@ -20,8 +20,8 @@ export const navigation = {
 };
 
 export const footerLinks = [
-    { label: "Impressum", href: "#" },
-    { label: "Datenschutz", href: "#" },
+    { label: "Impressum", href: "/impressum" },
+    { label: "Datenschutz", href: "/datenschutz" },
 ];
 
 export const hero = {
