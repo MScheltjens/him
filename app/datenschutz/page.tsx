@@ -1,6 +1,7 @@
+import type { Metadata } from "next";
+
 import { Container } from "@/components/ui/container";
 import { site } from "@/data/site";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: `Datenschutzerklärung | ${site.name}`,

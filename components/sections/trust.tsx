@@ -1,4 +1,5 @@
 import { hero, trustSection } from "@/data/site";
+
 import { Container } from "../ui/container";
 import { Metric } from "../ui/metric";
 import { SectionHeading } from "../ui/section-heading";

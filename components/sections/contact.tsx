@@ -1,5 +1,7 @@
-import { contactSection, site } from "@/data/site";
 import { Mail, MapPin, Phone } from "lucide-react";
+
+import { contactSection, site } from "@/data/site";
+
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { Container } from "../ui/container";

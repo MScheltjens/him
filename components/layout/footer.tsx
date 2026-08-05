@@ -1,5 +1,7 @@
-import { footerLinks, site } from "@/data/site";
 import Link from "next/link";
+
+import { footerLinks, site } from "@/data/site";
+
 import { Container } from "../ui/container";
 
 export function Footer() {

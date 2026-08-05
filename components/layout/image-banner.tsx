@@ -1,4 +1,5 @@
 import { bannerImage } from "@/data/images";
+
 import { ThemeImage } from "../ui/theme-image";
 
 export function ImageBanner() {

@@ -1,6 +1,7 @@
-import { unsplashUrl, type SiteImage } from "@/data/images";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
+
+import { type SiteImage,unsplashUrl } from "@/data/images";
+import { cn } from "@/lib/utils";
 
 interface ThemeImageProps {
     image: SiteImage;

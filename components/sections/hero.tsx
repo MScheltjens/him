@@ -1,6 +1,8 @@
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+
 import { heroImage } from "@/data/images";
 import { benefits, hero } from "@/data/site";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Container } from "../ui/container";

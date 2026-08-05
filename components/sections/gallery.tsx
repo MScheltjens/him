@@ -1,5 +1,6 @@
 import { galleryImages } from "@/data/images";
 import { gallerySection } from "@/data/site";
+
 import { Container } from "../ui/container";
 import { SectionHeading } from "../ui/section-heading";
 import { ThemeImage } from "../ui/theme-image";

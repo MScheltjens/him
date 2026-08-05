@@ -1,10 +1,10 @@
 import { Factory, HardHat, Mail, MapPin, Phone, Truck, Wrench } from "lucide-react";
 
 export const site = {
-    name: "HIM Schneider",
+    name: "HIM",
     tagline: "Hamburger Industrie- und Montageservice",
     phone: "+49 40 12345678",
-    email: "info@him-schneider.de",
+    email: "info@him.de",
     city: "Großraum Hamburg",
 };
 
@@ -48,7 +48,7 @@ export const benefits = [
 export const intro = {
     eyebrow: "Über uns",
     title: "Geschäftsführung mit Industrie-Know-how",
-    text: "HIM Schneider steht für Hamburger Industrie- und Montageservice — selbstständig geführt seit März 2024. Wir unterstützen Werften, Industriebetriebe und Montageprojekte im Großraum Hamburg mit praxisnahen Dienstleistungen direkt vor Ort.",
+    text: "HIM steht für Hamburger Industrie- und Montageservice — selbstständig geführt seit März 2024. Wir unterstützen Werften, Industriebetriebe und Montageprojekte im Großraum Hamburg mit praxisnahen Dienstleistungen direkt vor Ort.",
     highlights: [
         "Selbstständiger Geschäftsführer seit März 2024",
         "Schwerpunkt Schiffswerften und Industrie",
@@ -87,13 +87,13 @@ export const imageTextSection = {
     text: "Ob Werft, Industriehalle oder Montageprojekt — wir arbeiten dort, wo Sie uns brauchen. On-site im Großraum Hamburg, flexibel und zuverlässig.",
     paragraphs: [
         "Schiffswerften stellen besondere Anforderungen: enge Termine, wechselnde Einsatzorte und enge Abstimmung mit anderen Gewerken.",
-        "HIM Schneider bringt die nötige Erfahrung mit und unterstützt Sie dort, wo Kapazitäten oder Spezialwissen fehlen.",
+        "HIM bringt die nötige Erfahrung mit und unterstützt Sie dort, wo Kapazitäten oder Spezialwissen fehlen.",
     ],
     cta: "Mehr erfahren",
 };
 
 export const trustSection = {
-    eyebrow: "Warum HIM Schneider",
+    eyebrow: "Warum HIM",
     title: "Verlässlich, flexibel, vor Ort",
     text: "Als selbstständiger Geschäftsführer kenne ich die Anforderungen von Werften und Industriebetrieben aus der Praxis — und liefere, wenn es darauf ankommt.",
     items: [

@@ -1,9 +1,10 @@
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
-import { Inter } from "next/font/google";
+import "./globals.css";
 
 import type { Metadata } from "next";
-import "../globals.css";
+import { Inter } from "next/font/google";
+
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "HIM Schneider | Hamburger Industrie- und Montageservice",
+  title: "HIM | Hamburger Industrie- und Montageservice",
   description: "Technische Reinigung, Zuarbeit im Maschinenbau und Transportarbeiten auf Schiffswerften im Großraum Hamburg.",
 };
 
