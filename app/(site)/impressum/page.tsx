@@ -16,8 +16,10 @@ export default function ImpressumPage() {
                 <section className="space-y-2">
                     <h2 className="text-lg font-semibold tracking-tight text-foreground">Angaben gemäß § 5 TMG</h2>
                     <p className="text-sm leading-7 text-muted-foreground">
-                        [PLACEHOLDER: Vollständiger Name des Anbieters]<br />
-                        [PLACEHOLDER: Straße und Hausnummer]<br />
+                        [PLACEHOLDER: Vollständiger Name des Anbieters]
+                        <br />
+                        [PLACEHOLDER: Straße und Hausnummer]
+                        <br />
                         [PLACEHOLDER: PLZ und Ort]
                     </p>
                 </section>
@@ -25,7 +27,8 @@ export default function ImpressumPage() {
                 <section className="space-y-2">
                     <h2 className="text-lg font-semibold tracking-tight text-foreground">Kontakt</h2>
                     <p className="text-sm leading-7 text-muted-foreground">
-                        Telefon: {site.phone}<br />
+                        Telefon: {site.phone}
+                        <br />
                         E-Mail: {site.email}
                     </p>
                 </section>
@@ -47,7 +50,8 @@ export default function ImpressumPage() {
                 <section className="space-y-2">
                     <h2 className="text-lg font-semibold tracking-tight text-foreground">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
                     <p className="text-sm leading-7 text-muted-foreground">
-                        [PLACEHOLDER: Vollständiger Name]<br />
+                        [PLACEHOLDER: Vollständiger Name]
+                        <br />
                         [PLACEHOLDER: Anschrift wie oben]
                     </p>
                 </section>

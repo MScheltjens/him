@@ -90,5 +90,29 @@ export async function sendContactMessage(
         };
     }
 
+    // Best-effort confirmation back to the sender. The business notification above
+    // already succeeded, so a failure here shouldn't turn the submission into an error
+    // (and will legitimately fail in Resend's sandbox mode until a domain is verified).
+    const { error: autoReplyError } = await resend.emails.send({
+        from: process.env.RESEND_FROM_EMAIL || "HIM - Schneider Kontaktformular <onboarding@resend.dev>",
+        to: email,
+        subject: `Ihre Anfrage bei ${site.name}`,
+        text: [
+            `Hallo ${name},`,
+            "",
+            "vielen Dank für Ihre Anfrage. Wir haben Ihre Nachricht erhalten und melden uns zeitnah bei Ihnen.",
+            "",
+            "Ihre Nachricht:",
+            message,
+            "",
+            "Mit freundlichen Grüßen",
+            site.name,
+        ].join("\n"),
+    });
+
+    if (autoReplyError) {
+        console.error("sendContactMessage: auto-reply error", autoReplyError);
+    }
+
     return { status: "success", message: "Danke! Ihre Nachricht wurde gesendet." };
 }

@@ -8,6 +8,14 @@ export const site = {
     city: "Großraum Hamburg",
 };
 
+// TODO: confirm this is the final production domain (see TODO.md).
+export const siteUrl = "https://him-schneider.de";
+
+export const siteDescription =
+    "Technische Reinigung, Zuarbeit im Maschinenbau und Transportarbeiten auf Werften im Großraum Hamburg.";
+
+export const siteTitle = "HIM - Schneider | Hamburger Industrie- und Montageservice";
+
 export const navigation = {
     items: [
         { label: "Leistungen", href: "#leistungen" },

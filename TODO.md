@@ -39,6 +39,11 @@ open items come up — it's not meant to be a static document.
       `t.schneider@him-schneider.de` instead of the personal test inbox.
 - [ ] Fill in Impressum/Datenschutz placeholders once client data arrives
       (see above).
+- [ ] Datenschutzerklärung §3 (Kontaktformular) placeholder still says "once
+      the form is functional, describe..." — it now is functional (incl. an
+      auto-reply email), so this section needs real legal copy, ideally
+      reviewed by a lawyer, describing what's sent/stored and the GDPR legal
+      basis (Art. 6 Abs. 1 lit. b DSGVO).
 - [ ] Add a `Sitemap` directive to `app/robots.ts` and generate
       `app/sitemap.ts` once the production domain is finalized.
 - [ ] Confirm `siteUrl` in `app/layout.tsx` (`https://him-schneider.de`,

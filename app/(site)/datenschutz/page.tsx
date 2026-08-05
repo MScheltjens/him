@@ -16,10 +16,14 @@ export default function DatenschutzPage() {
                 <section className="space-y-2">
                     <h2 className="text-lg font-semibold tracking-tight text-foreground">1. Verantwortlicher</h2>
                     <p className="text-sm leading-7 text-muted-foreground">
-                        [PLACEHOLDER: Vollständiger Name des Anbieters]<br />
-                        [PLACEHOLDER: Straße und Hausnummer]<br />
-                        [PLACEHOLDER: PLZ und Ort]<br />
-                        Telefon: {site.phone}<br />
+                        [PLACEHOLDER: Vollständiger Name des Anbieters]
+                        <br />
+                        [PLACEHOLDER: Straße und Hausnummer]
+                        <br />
+                        [PLACEHOLDER: PLZ und Ort]
+                        <br />
+                        Telefon: {site.phone}
+                        <br />
                         E-Mail: {site.email}
                     </p>
                 </section>

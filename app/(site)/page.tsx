@@ -8,18 +8,18 @@ import { Intro } from "@/components/sections/intro";
 import { Services } from "@/components/sections/services";
 import { Trust } from "@/components/sections/trust";
 
-export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <Intro />
-      <Services />
-      <Trust />
-      <Gallery />
-      <Faq />
-      <Cta />
-      <Contact />
-      <ImageBanner />
-    </main>
-  );
+export default function HomePage() {
+    return (
+        <main>
+            <Hero />
+            <Intro />
+            <Services />
+            <Trust />
+            <Gallery />
+            <Faq />
+            <Cta />
+            <Contact />
+            <ImageBanner />
+        </main>
+    );
 }
