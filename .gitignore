@@ -22,6 +22,7 @@
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
 
 # debug
@@ -40,5 +41,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
-.
+# claude code (local/machine-specific permissions; commit .claude/settings.json if you add shared config)
+.claude/settings.local.json
