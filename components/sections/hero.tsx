@@ -1,10 +1,12 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 import { heroImage } from "@/data/images";
 import { benefits, hero } from "@/data/site";
+import { cn } from "@/lib/utils";
 
 import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { Container } from "../ui/container";
 import { ThemeImage } from "../ui/theme-image";
 
@@ -34,16 +36,15 @@ export function Hero() {
                         </p>
                     </div>
                     <div className="flex flex-col gap-3 sm:flex-row">
-                        <a href="#kontakt">
-                            <Button size="lg" className="px-6 text-base">
-                                {hero.primaryCta} <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
-                        </a>
-                        <a href="#leistungen">
-                            <Button size="lg" variant="outline" className="border-2 border-primary/50 px-6 text-base hover:bg-primary/10">
-                                {hero.secondaryCta}
-                            </Button>
-                        </a>
+                        <Link href="#kontakt" className={cn(buttonVariants({ size: "lg" }), "px-6 text-base")}>
+                            {hero.primaryCta} <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                        <Link
+                            href="#leistungen"
+                            className={cn(buttonVariants({ size: "lg", variant: "outline" }), "border-2 border-primary/50 px-6 text-base hover:bg-primary/10")}
+                        >
+                            {hero.secondaryCta}
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-3 md:flex-row justify-between">
                         {benefits.map((item) => (

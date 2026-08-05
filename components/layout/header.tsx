@@ -25,9 +25,9 @@ export function Header() {
                 {/* Desktop Navigation */}
                 <nav className="hidden items-center gap-8 md:flex">
                     {navigation.items.map((item) => (
-                        <a key={item.label} href={item.href} className="text-sm font-medium text-foreground transition hover:text-primary">
+                        <Link key={item.label} href={item.href} className="text-sm font-medium text-foreground transition hover:text-primary">
                             {item.label}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
@@ -71,9 +71,9 @@ export function Header() {
                             </Link>
                         </SheetContent>
                     </Sheet>
-                    <Button asChild className="rounded-full px-5 hidden md:inline-flex mr-4">
-                        <a href="#kontakt">{navigation.cta}</a>
-                    </Button>
+                    <Link href="#kontakt" className={cn(buttonVariants({ variant: "default" }), "rounded-full px-5 hidden md:inline-flex mr-4")}>
+                        {navigation.cta}
+                    </Link>
                 </div>
             </Container>
         </header>
