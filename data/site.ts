@@ -4,7 +4,7 @@ export const site = {
     name: "HIM",
     tagline: "Hamburger Industrie- und Montageservice",
     phone: "+49 40 12345678",
-    email: "info@him.de",
+    email: "t.schneider@him-schneider.de",
     city: "Großraum Hamburg",
 };
 
