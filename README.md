@@ -1,15 +1,17 @@
 # HIM — Hamburger Industrie- und Montageservice
 
-Single-page German-language marketing site for HIM, an independent industrial
-service provider in Hamburg (technical cleaning, mechanical engineering
-support, and transport work on shipyards). Built with Next.js App Router.
+Single-page German-language marketing site for HIM Schneider, an independent
+industrial service provider in Hamburg (technical cleaning, mechanical
+engineering support, and transport work on shipyards). Built with Next.js App
+Router.
 
 ## Stack
 
 - **Next.js 16** (App Router, Turbopack) + **React 19** + **TypeScript**
 - **Tailwind CSS v4** (CSS-first config, no `tailwind.config.*`)
-- **shadcn/ui** primitives (style `radix-nova`, Radix + `lucide-react` icons)
+- **shadcn/ui** primitives (Radix + `lucide-react` icons)
 - **Resend** for the contact form's email delivery
+- **Vercel Analytics** (`@vercel/analytics`)
 - **pnpm** as the package manager
 
 ## Getting started
@@ -24,44 +26,59 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
-| Command      | Description                       |
-| ------------ | ---------------------------------- |
-| `pnpm dev`   | Start the dev server (Turbopack)   |
-| `pnpm build` | Production build                   |
-| `pnpm start` | Run the production build           |
-| `pnpm lint`  | ESLint                             |
+| Command      | Description                     |
+| ------------ | ------------------------------- |
+| `pnpm dev`   | Start the dev server (Turbopack)|
+| `pnpm build` | Production build                |
+| `pnpm start` | Run the production build        |
+| `pnpm lint`  | ESLint                          |
 
 ## Project structure
 
-- **`app/`** — routes only. `app/page.tsx` composes the homepage from section
-  components in order (Hero → Intro → Services → Trust → Gallery → Faq → Cta
-  → Contact → ImageBanner). `app/layout.tsx` wraps every route with
-  `Header`/`Footer`. `app/robots.ts` generates `robots.txt`. Legal pages
-  (`impressum`, `datenschutz`) are separate routes.
-- **`components/sections/`** — one component per homepage section, matched
-  1:1 to a data object in `data/site.ts`. To change homepage copy, edit
-  `data/site.ts`, not the section components.
-- **`components/layout/`** — header, footer, `image-banner`, `logo-mark`.
-- **`components/ui/`** — shadcn/ui primitives, installed via the shadcn CLI
-  (see `components.json`).
-- **`data/site.ts`** — all copy/content for the homepage sections, nav items,
-  and footer links, as typed exported consts.
-- **`data/images.ts`** — image content is Unsplash-hosted, not local
-  (`unsplashUrl(id, width)` builds the URL). Any new external image host
-  must be added to `images.remotePatterns` in `next.config.ts`.
-- **`lib/utils.ts`** — `cn()` (clsx + tailwind-merge).
-- **`lib/actions.ts`** — Server Actions. Currently just `sendContactMessage`,
-  which powers the contact form (see below).
+```
+app/
+├── layout.tsx              # Root layout: metadata, header/footer, analytics
+├── (site)/                 # Route group — pages only, URLs unchanged
+│   ├── page.tsx            # Homepage (section composition)
+│   ├── impressum/
+│   └── datenschutz/
+├── icon.tsx, apple-icon.tsx  # Generated favicons (see lib/og-icon.tsx)
+├── manifest.ts, robots.ts
+└── not-found.tsx
+
+components/
+├── sections/               # One component per homepage section
+├── layout/                 # Header, footer, logo-mark, image-banner
+└── ui/                     # shadcn/ui primitives (see components.json)
+
+data/
+├── site.ts                 # Copy, nav, footer links, siteUrl/title/description
+└── images.ts               # Unsplash image IDs + unsplashUrl() helper
+
+lib/
+├── actions.ts              # sendContactMessage server action
+├── og-icon.tsx             # Shared SVG for generated app icons
+└── utils.ts                # cn() helper
+
+styles/globals.css          # Tailwind v4 theme + utilities
+```
+
+- **Homepage** — `app/(site)/page.tsx` composes sections in order: Hero →
+  Intro → Services → Trust → Gallery → Faq → Cta → Contact → ImageBanner.
+- **Copy** — edit `data/site.ts`, not the section components.
+- **Images** — Unsplash-hosted via `data/images.ts`. New external hosts must
+  be added to `images.remotePatterns` in `next.config.ts`.
+- **`public/`** — empty and fine for now. Icons are generated routes; images
+  are remote. Add static files here only when needed (PDFs, local assets).
 
 ## Styling
 
-Tailwind v4, CSS-first config in `app/globals.css`. Theme tokens
-(`--background`, `--primary`, `--secondary`, `--accent`, ...) implement a
-"warm concrete + harbor teal + safety orange" palette in `:root`/`.dark`, then
+Tailwind v4, CSS-first config in `styles/globals.css`. Theme tokens
+(`--background`, `--primary`, `--secondary`, `--accent`, …) implement a
+"warm concrete + harbor teal + safety orange" palette in `:root`/`.dark`,
 re-exposed via `@theme inline`. Prefer semantic tokens (`bg-primary`,
-`text-muted-foreground`, ...) over raw palette colors. `--radius` is `2px`
-sitewide (deliberately sharp corners). Reusable utility classes live in
-`@layer utilities` in `globals.css`.
+`text-muted-foreground`, …) over raw palette colors. `--radius` is `2px`
+sitewide (deliberately sharp corners).
 
 ## Contact form & email (Resend)
 
