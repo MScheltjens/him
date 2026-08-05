@@ -1,7 +1,7 @@
 import { Factory, HardHat, Mail, MapPin, Phone, Truck, Wrench } from "lucide-react";
 
 export const site = {
-    name: "HIM",
+    name: "HIM - Schneider",
     tagline: "Hamburger Industrie- und Montageservice",
     phone: "+49 40 12345678",
     email: "t.schneider@him-schneider.de",
@@ -27,8 +27,8 @@ export const footerLinks = [
 export const hero = {
     badge: "Großraum Hamburg · Vor Ort",
     title: "Industrie- und Montageservice",
-    titleHighlight: "für Hamburg & Schiffswerften",
-    text: "Technische Reinigung, Zuarbeit im Maschinenbau und Transportarbeiten auf Schiffswerften — zuverlässig, flexibel und direkt vor Ort.",
+    titleHighlight: "für Großraum Hamburg",
+    text: "Technische Reinigung, Zuarbeit im Maschinenbau und Transportarbeiten auf Werften — zuverlässig, flexibel und direkt vor Ort.",
     primaryCta: "Jetzt Kontakt aufnehmen",
     secondaryCta: "Leistungen ansehen",
     metrics: [
@@ -40,7 +40,7 @@ export const hero = {
 
 export const benefits = [
     "Einsätze vor Ort in Hamburg und Umgebung",
-    "Erfahrung auf Schiffswerften und in der Industrie",
+    "Erfahrung auf Werften und in der Industrie",
     "Flexible Zuarbeit im Maschinenbau",
     "Zuverlässige Transport- und Montagearbeiten",
 ];
@@ -51,7 +51,7 @@ export const intro = {
     text: "HIM steht für Hamburger Industrie- und Montageservice — selbstständig geführt seit März 2024. Wir unterstützen Werften, Industriebetriebe und Montageprojekte im Großraum Hamburg mit praxisnahen Dienstleistungen direkt vor Ort.",
     highlights: [
         "Selbstständiger Geschäftsführer seit März 2024",
-        "Schwerpunkt Schiffswerften und Industrie",
+        "Schwerpunkt Werften und Industrie",
         "Technische Reinigung und Montagearbeiten",
         "Transport und Zuarbeit im Maschinenbau",
     ],
@@ -60,7 +60,7 @@ export const intro = {
 export const servicesSection = {
     eyebrow: "Leistungen",
     title: "Drei Kernbereiche, klar strukturiert",
-    text: "Technische Reinigung, Maschinenbau-Zuarbeit und Transportarbeiten auf Schiffswerften — alles aus einer Hand, flexibel und vor Ort im Großraum Hamburg.",
+    text: "Technische Reinigung, Maschinenbau-Zuarbeit und Transportarbeiten auf Werften — alles aus einer Hand, flexibel und vor Ort im Großraum Hamburg.",
 };
 
 export const services = [
@@ -75,8 +75,8 @@ export const services = [
         icon: Wrench,
     },
     {
-        title: "Transport auf Schiffswerften",
-        text: "Transportarbeiten direkt auf Schiffswerften — Material, Bauteile und Ausrüstung sicher und termingerecht bewegen.",
+        title: "Transport auf Werften",
+        text: "Transportarbeiten direkt auf Werften — Material, Bauteile und Ausrüstung sicher und termingerecht bewegen.",
         icon: Truck,
     },
 ];
@@ -86,7 +86,7 @@ export const imageTextSection = {
     title: "Vor Ort im Großraum Hamburg",
     text: "Ob Werft, Industriehalle oder Montageprojekt — wir arbeiten dort, wo Sie uns brauchen. On-site im Großraum Hamburg, flexibel und zuverlässig.",
     paragraphs: [
-        "Schiffswerften stellen besondere Anforderungen: enge Termine, wechselnde Einsatzorte und enge Abstimmung mit anderen Gewerken.",
+        "Werften stellen besondere Anforderungen: enge Termine, wechselnde Einsatzorte und enge Abstimmung mit anderen Gewerken.",
         "HIM bringt die nötige Erfahrung mit und unterstützt Sie dort, wo Kapazitäten oder Spezialwissen fehlen.",
     ],
     cta: "Mehr erfahren",
@@ -97,7 +97,7 @@ export const trustSection = {
     title: "Verlässlich, flexibel, vor Ort",
     text: "Als selbstständiger Geschäftsführer kenne ich die Anforderungen von Werften und Industriebetrieben aus der Praxis — und liefere, wenn es darauf ankommt.",
     items: [
-        { title: "Erfahrung auf Schiffswerften", icon: HardHat },
+        { title: "Erfahrung auf Werften", icon: HardHat },
         { title: "Schnelle Erreichbarkeit", icon: Phone },
         { title: "Einsätze im Großraum Hamburg", icon: MapPin },
         { title: "Direkter Ansprechpartner", icon: Mail },
@@ -120,11 +120,11 @@ export const faqSection = {
 export const faqs = [
     {
         q: "In welchem Gebiet sind Sie tätig?",
-        a: "Wir arbeiten im Großraum Hamburg und Umgebung — vor Ort auf Schiffswerften, in Industriebetrieben und bei Montageprojekten.",
+        a: "Wir arbeiten im Großraum Hamburg und Umgebung — vor Ort auf Werften, in Industriebetrieben und bei Montageprojekten.",
     },
     {
         q: "Welche Leistungen bieten Sie an?",
-        a: "Unser Angebot umfasst technische Reinigung, Zuarbeit im Maschinenbau sowie Transportarbeiten auf Schiffswerften.",
+        a: "Unser Angebot umfasst technische Reinigung, Zuarbeit im Maschinenbau sowie Transportarbeiten auf Werften.",
     },
     {
         q: "Kann ich kurzfristig anfragen?",

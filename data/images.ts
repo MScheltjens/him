@@ -10,7 +10,7 @@ export type SiteImage = {
 
 export const heroImage: SiteImage = {
     id: "1755428822965-ce3d6078abdf",
-    alt: "Industrielle Krane an einer Schiffswerft in Hamburg",
+    alt: "Industrielle Krane an einer Werft in Hamburg",
     credit: "Julia Taubitz / Unsplash",
 };
 
@@ -23,7 +23,7 @@ export const bannerImage: SiteImage = {
 export const galleryImages: SiteImage[] = [
     {
         id: "1761519609568-23c8076df45b",
-        alt: "Baukrane an einer Schiffswerft unter bewölktem Himmel",
+        alt: "Baukrane an einer Werft unter bewölktem Himmel",
         credit: "Sean Thoman / Unsplash",
     },
     {
@@ -42,9 +42,9 @@ export const galleryImages: SiteImage[] = [
         credit: "Solømen / Unsplash",
     },
     {
-        id: "1504917593497-162098afe35f",
+        id: "1764245546004-e6b743242a80",
         alt: "Industrielle Werkstatt mit Maschinen und Funken",
-        credit: "Unsplash",
+        credit: "Maryam Saghandi / Unsplash",
     },
     {
         id: "1581091226825-a6a2a5aee158",

@@ -27,8 +27,14 @@ export function Contact() {
                         text={contactSection.text}
                     />
                     <div className="space-y-4 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-3"><Phone className="h-4 w-4 text-primary" /> {site.phone}</div>
-                        <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-primary" /> {site.email}</div>
+                        <div className="flex items-center gap-3">
+                            <Phone className="h-4 w-4 text-primary" />
+                            <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="hover:text-foreground">{site.phone}</a>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Mail className="h-4 w-4 text-primary" />
+                            <a href={`mailto:${site.email}`} className="hover:text-foreground">{site.email}</a>
+                        </div>
                         <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-primary" /> {site.city}</div>
                     </div>
                 </div>

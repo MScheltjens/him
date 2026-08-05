@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "HIM | Hamburger Industrie- und Montageservice",
-  description: "Technische Reinigung, Zuarbeit im Maschinenbau und Transportarbeiten auf Schiffswerften im Großraum Hamburg.",
+  title: "HIM - Schneider | Hamburger Industrie- und Montageservice",
+  description: "Technische Reinigung, Zuarbeit im Maschinenbau und Transportarbeiten auf Werften im Großraum Hamburg.",
 };
 
 export default function RootLayout({
