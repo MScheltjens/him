@@ -1,0 +1,18 @@
+---
+description: Read before writing any Next.js App Router code — this repo pins a Next.js version ahead of training data with breaking changes
+globs: app/**,components/**
+alwaysApply: true
+---
+
+This project pins `next@16.3.0`, a version ahead of your training data with
+breaking API/convention changes from the Next.js you know. Before writing any
+code, read the relevant guide under `node_modules/next/dist/docs/` (resolved
+from the repo root — in monorepos the `next` package may not be visible from
+elsewhere): `01-app/`, `02-pages/`, `03-architecture/`, `04-community/`. Heed
+any deprecation notices found there.
+
+`AGENTS.md` contains a banner block (`# This is NOT the Next.js you know`)
+that is written/re-added by `next dev` on every run (see
+`node_modules/next/dist/server/lib/generate-agent-files.js`). If it's absent
+from a diff, that's expected — removing it only re-creates the uncommitted
+change. Commit it as-is if it shows up staged; don't strip it.
