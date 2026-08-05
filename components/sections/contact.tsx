@@ -26,7 +26,7 @@ export function Contact() {
                         <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-primary" /> {site.city}</div>
                     </div>
                 </div>
-                <Card className="border-2 border-steel-200 shadow-sm">
+                <Card className="border-2 border-concrete-200 shadow-sm">
                     <CardContent className="space-y-5 p-6 sm:p-8">
                         <div className="grid gap-5 sm:grid-cols-2">
                             <Label htmlFor="name">{contactSection.formLabels.name}</Label>

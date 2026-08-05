@@ -15,7 +15,7 @@ export function Faq() {
                 />
                 <div className="space-y-3 sm:space-y-4">
                     {faqs.map((item) => (
-                        <Card key={item.q} className="border-steel-200 bg-background shadow-sm hover:border-primary/40 transition">
+                        <Card key={item.q} className="border-concrete-200 bg-background shadow-sm hover:border-primary/40 transition">
                             <CardContent className="space-y-2 sm:space-y-3 p-4 sm:p-6">
                                 <h3 className="text-base sm:text-lg font-semibold tracking-tight text-foreground"><span className="text-primary mr-2">◆</span>{item.q}</h3>
                                 <p className="text-xs sm:text-sm leading-6 sm:leading-7 text-muted-foreground">{item.a}</p>

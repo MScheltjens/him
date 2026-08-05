@@ -14,36 +14,36 @@
   --radius-4xl: 2px;
   --radius-full: 2px;
 
-  /* Steel & maritime palette */
-  --color-steel-50:  #f3f5f7;
-  --color-steel-100: #e4e8ec;
-  --color-steel-200: #c8d0d8;
-  --color-steel-300: #9aa8b4;
-  --color-steel-400: #6b7d8c;
-  --color-steel-500: #4a5c6b;
-  --color-steel-600: #364754;
-  --color-steel-700: #283540;
-  --color-steel-800: #1c252e;
-  --color-steel-900: #121920;
+  /* Concrete & harbor palette */
+  --color-concrete-50:  #f7f6f4;
+  --color-concrete-100: #ece9e4;
+  --color-concrete-200: #d9d3c9;
+  --color-concrete-300: #bcb3a3;
+  --color-concrete-400: #998d79;
+  --color-concrete-500: #7a6f5c;
+  --color-concrete-600: #5e5445;
+  --color-concrete-700: #453e33;
+  --color-concrete-800: #2e2924;
+  --color-concrete-900: #1c1916;
 
-  --color-rust-400: #e07a3a;
-  --color-rust-500: #c45c1a;
-  --color-rust-600: #a34a12;
+  --color-harbor-400: #3a92a8;
+  --color-harbor-500: #0f6e8c;
+  --color-harbor-600: #0b5570;
 
-  --color-amber-400: #f0a030;
-  --color-amber-500: #d97706;
+  --color-safety-400: #ff8a3d;
+  --color-safety-500: #e8590c;
 
-  /* Map legacy blue utilities to steel tones */
-  --color-blue-50:  var(--color-steel-50);
-  --color-blue-100: var(--color-steel-100);
-  --color-blue-200: var(--color-steel-200);
-  --color-blue-300: var(--color-steel-300);
-  --color-blue-400: var(--color-steel-400);
-  --color-blue-500: var(--color-steel-600);
-  --color-blue-600: var(--color-steel-700);
-  --color-blue-700: var(--color-steel-800);
-  --color-blue-800: var(--color-steel-900);
-  --color-blue-950: #0a0f14;
+  /* Map legacy blue utilities to harbor tones */
+  --color-blue-50:  #eef6f8;
+  --color-blue-100: #d3e8ed;
+  --color-blue-200: #a3d0da;
+  --color-blue-300: #6bb0c0;
+  --color-blue-400: var(--color-harbor-400);
+  --color-blue-500: var(--color-harbor-500);
+  --color-blue-600: var(--color-harbor-600);
+  --color-blue-700: #083f54;
+  --color-blue-800: #082c3a;
+  --color-blue-950: #051b24;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -51,111 +51,113 @@
 :root {
   --font-sans: "Inter", sans-serif;
 
-  /* Brand — werf, staal, maritiem */
-  --brand-steel: #283540;
-  --brand-steel-dark: #1c252e;
-  --brand-rust: #c45c1a;
-  --brand-amber: #d97706;
-  --brand-concrete: #eef1f4;
+  /* Brand — hafen, beton, werf */
+  --brand-charcoal: #2e2924;
+  --brand-charcoal-dark: #1c1916;
+  --brand-harbor: #0f6e8c;
+  --brand-harbor-dark: #051b24;
+  --brand-safety: #e8590c;
+  --brand-fog: #f6f4f1;
 
   /* Base */
-  --background: oklch(0.965 0.006 240);
-  --foreground: oklch(0.22 0.02 240);
+  --background: oklch(0.97 0.006 75);
+  --foreground: oklch(0.22 0.015 75);
 
   /* Surfaces */
-  --card: oklch(0.99 0.003 240);
-  --card-foreground: oklch(0.22 0.02 240);
+  --card: oklch(0.99 0.003 75);
+  --card-foreground: oklch(0.22 0.015 75);
 
-  --popover: oklch(0.99 0.003 240);
-  --popover-foreground: oklch(0.22 0.02 240);
+  --popover: oklch(0.99 0.003 75);
+  --popover-foreground: oklch(0.22 0.015 75);
 
-  /* Rust/amber accent — lasvonk, veiligheidskleur */
-  --primary: var(--brand-rust);
+  /* Harbor teal — hoofdaccent, CTA's, links */
+  --primary: var(--brand-harbor);
   --primary-foreground: #ffffff;
 
-  /* Donker staal — koppen, navigatie, titels */
-  --secondary: var(--brand-steel);
-  --secondary-foreground: #f3f5f7;
+  /* Donker beton — koppen, navigatie, titels */
+  --secondary: var(--brand-charcoal);
+  --secondary-foreground: #f7f6f4;
 
-  --accent: var(--brand-amber);
-  --accent-foreground: #1c252e;
+  /* Safety oranje — veiligheidskleur, kleine accenten */
+  --accent: var(--brand-safety);
+  --accent-foreground: #1c1916;
 
   /* Muted / UI */
-  --muted: oklch(0.94 0.008 240);
-  --muted-foreground: oklch(0.48 0.02 240);
+  --muted: oklch(0.94 0.008 75);
+  --muted-foreground: oklch(0.48 0.02 75);
 
   /* Feedback */
   --destructive: oklch(0.55 0.2 25);
   --destructive-foreground: oklch(0.98 0.002 95);
 
   /* Borders / inputs / focus */
-  --border: oklch(0.88 0.012 240);
-  --input: oklch(0.88 0.012 240);
-  --ring: var(--brand-rust);
+  --border: oklch(0.88 0.012 75);
+  --input: oklch(0.88 0.012 75);
+  --ring: var(--brand-harbor);
 
   /* Charts */
-  --chart-1: var(--brand-steel);
-  --chart-2: var(--brand-rust);
-  --chart-3: oklch(0.45 0.03 240);
-  --chart-4: var(--brand-amber);
-  --chart-5: oklch(0.55 0.04 220);
+  --chart-1: var(--brand-charcoal);
+  --chart-2: var(--brand-harbor);
+  --chart-3: oklch(0.45 0.03 75);
+  --chart-4: var(--brand-safety);
+  --chart-5: oklch(0.55 0.06 60);
 
   --radius: 2px;
 
   /* Sidebar */
-  --sidebar: oklch(0.975 0.005 240);
-  --sidebar-foreground: oklch(0.22 0.02 240);
-  --sidebar-primary: var(--brand-steel);
-  --sidebar-primary-foreground: #f3f5f7;
-  --sidebar-accent: oklch(0.94 0.008 240);
-  --sidebar-accent-foreground: oklch(0.22 0.02 240);
-  --sidebar-border: oklch(0.88 0.012 240);
-  --sidebar-ring: var(--brand-rust);
+  --sidebar: oklch(0.975 0.005 75);
+  --sidebar-foreground: oklch(0.22 0.015 75);
+  --sidebar-primary: var(--brand-harbor);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: oklch(0.94 0.008 75);
+  --sidebar-accent-foreground: oklch(0.22 0.015 75);
+  --sidebar-border: oklch(0.88 0.012 75);
+  --sidebar-ring: var(--brand-harbor);
 }
 
 .dark {
-  --background: oklch(0.17 0.015 240);
-  --foreground: oklch(0.94 0.006 240);
+  --background: oklch(0.16 0.015 75);
+  --foreground: oklch(0.94 0.006 75);
 
-  --card: oklch(0.20 0.015 240);
-  --card-foreground: oklch(0.94 0.006 240);
+  --card: oklch(0.19 0.015 75);
+  --card-foreground: oklch(0.94 0.006 75);
 
-  --popover: oklch(0.20 0.015 240);
-  --popover-foreground: oklch(0.94 0.006 240);
+  --popover: oklch(0.19 0.015 75);
+  --popover-foreground: oklch(0.94 0.006 75);
 
-  --primary: #e07a3a;
-  --primary-foreground: #1c252e;
+  --primary: #3a92a8;
+  --primary-foreground: #051b24;
 
-  --secondary: oklch(0.72 0.04 240);
-  --secondary-foreground: oklch(0.17 0.015 240);
+  --secondary: oklch(0.72 0.03 75);
+  --secondary-foreground: oklch(0.16 0.015 75);
 
-  --accent: #f0a030;
-  --accent-foreground: #1c252e;
+  --accent: #ff8a3d;
+  --accent-foreground: #1c1916;
 
-  --muted: oklch(0.26 0.015 240);
-  --muted-foreground: oklch(0.68 0.02 240);
+  --muted: oklch(0.26 0.015 75);
+  --muted-foreground: oklch(0.68 0.02 75);
 
   --destructive: oklch(0.62 0.2 25);
   --destructive-foreground: oklch(0.98 0.003 95);
 
-  --border: oklch(0.30 0.015 240);
-  --input: oklch(0.30 0.015 240);
-  --ring: #e07a3a;
+  --border: oklch(0.30 0.015 75);
+  --input: oklch(0.30 0.015 75);
+  --ring: #3a92a8;
 
-  --chart-1: oklch(0.72 0.04 240);
-  --chart-2: #e07a3a;
-  --chart-3: oklch(0.55 0.03 220);
-  --chart-4: #f0a030;
-  --chart-5: oklch(0.48 0.04 240);
+  --chart-1: oklch(0.72 0.03 75);
+  --chart-2: #3a92a8;
+  --chart-3: oklch(0.55 0.03 60);
+  --chart-4: #ff8a3d;
+  --chart-5: oklch(0.48 0.04 75);
 
-  --sidebar: oklch(0.20 0.015 240);
-  --sidebar-foreground: oklch(0.94 0.006 240);
-  --sidebar-primary: #e07a3a;
-  --sidebar-primary-foreground: #1c252e;
-  --sidebar-accent: oklch(0.26 0.015 240);
-  --sidebar-accent-foreground: oklch(0.94 0.006 240);
-  --sidebar-border: oklch(0.30 0.015 240);
-  --sidebar-ring: #e07a3a;
+  --sidebar: oklch(0.19 0.015 75);
+  --sidebar-foreground: oklch(0.94 0.006 75);
+  --sidebar-primary: #3a92a8;
+  --sidebar-primary-foreground: #051b24;
+  --sidebar-accent: oklch(0.26 0.015 75);
+  --sidebar-accent-foreground: oklch(0.94 0.006 75);
+  --sidebar-border: oklch(0.30 0.015 75);
+  --sidebar-ring: #3a92a8;
 }
 
 @theme inline {
@@ -282,16 +284,16 @@
   .brand-gradient {
     background-image: linear-gradient(
       135deg,
-      var(--brand-steel-dark) 0%,
-      var(--brand-steel) 100%
+      var(--brand-charcoal-dark) 0%,
+      var(--brand-charcoal) 100%
     );
   }
 
   .accent-gradient {
     background-image: linear-gradient(
       135deg,
-      var(--brand-rust) 0%,
-      var(--brand-amber) 100%
+      var(--brand-safety) 0%,
+      #ff8a3d 100%
     );
   }
 

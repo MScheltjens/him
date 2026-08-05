@@ -15,7 +15,7 @@ export function Intro() {
                 />
                 <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
                     {intro.highlights.map((item) => (
-                        <Card key={item} className="border-steel-200 shadow-sm hover:border-primary/40 transition">
+                        <Card key={item} className="border-concrete-200 shadow-sm hover:border-primary/40 transition">
                             <CardContent className="flex items-start gap-3 p-4 sm:p-6">
                                 <span className="mt-1 text-primary text-sm">◆</span>
                                 <p className="text-sm sm:text-base leading-7 text-muted-foreground">{item}</p>
