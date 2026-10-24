@@ -1,0 +1,9 @@
+{
+  // Suggested when the repo is opened in VS Code or Cursor.
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "github.vscode-github-actions",
+    "mikestead.dotenv"
+  ]
+}
