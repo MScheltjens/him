@@ -1,5 +1,7 @@
 # HIM — Hamburger Industrie- und Montageservice
 
+[![CI](https://github.com/MScheltjens/him/actions/workflows/ci.yml/badge.svg)](https://github.com/MScheltjens/him/actions/workflows/ci.yml)
+
 Single-page German-language marketing site for HIM Schneider, an independent
 industrial service provider in Hamburg (technical cleaning, mechanical
 engineering support, and transport work on shipyards). Built with Next.js App
@@ -12,7 +14,7 @@ Router.
 - **shadcn/ui** primitives (Radix + `lucide-react` icons)
 - **Resend** for the contact form's email delivery
 - **Vercel Analytics** (`@vercel/analytics`)
-- **pnpm** as the package manager
+- **pnpm 12** as the package manager, **Node 24**
 
 ## Getting started
 
@@ -32,6 +34,19 @@ Open [http://localhost:3000](http://localhost:3000).
 | `pnpm build` | Production build                |
 | `pnpm start` | Run the production build        |
 | `pnpm lint`  | ESLint                          |
+| `pnpm typecheck` | Route types + `tsc --noEmit` |
+
+## Editor setup
+
+[`.vscode/`](.vscode) holds settings for VS Code and Cursor. Opening the project
+suggests the recommended extensions: ESLint (fixes import order on save),
+Tailwind CSS IntelliSense, GitHub Actions and `.env` highlighting.
+
+## CI
+
+Every pull request and every push to `main` runs
+[the CI workflow](.github/workflows/ci.yml): install, lint, typecheck and build.
+`main` is protected: changes go in through a PR, and CI must pass first.
 
 ## Project structure
 

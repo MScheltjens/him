@@ -1,3 +1,19 @@
 {
-  "biome.enabled": false
+  "biome.enabled": false,
+
+  // Lint with ESLint and fix import order (simple-import-sort) on save.
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // Tailwind v4 config lives in CSS, so point IntelliSense at it.
+  "tailwindCSS.experimental.configFile": "styles/globals.css",
+
+  // Build output: keep it out of search results and the file watcher.
+  "search.exclude": {
+    "**/.next/**": true
+  },
+  "files.watcherExclude": {
+    "**/.next/**": true
+  }
 }

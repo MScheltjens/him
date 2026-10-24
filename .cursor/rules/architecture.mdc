@@ -7,10 +7,10 @@ alwaysApply: true
 Single-page marketing site (German-language, industrial services business
 "HIM" in Hamburg) built on Next.js App Router.
 
-- **`app/`** — routes only. `app/page.tsx` composes the homepage purely from
+- **`app/`** — routes only. `app/(site)/page.tsx` composes the homepage purely from
   section components in order (Hero → Intro → Services → Trust → Gallery →
   Faq → Cta → Contact → ImageBanner). `app/layout.tsx` wraps every route with
-  `Header`/`Footer`. Legal pages (`impressum`, `datenschutz`) are separate
+  `Header`/`Footer`. Pages live in the `(site)` route group (URLs unchanged); legal pages (`impressum`, `datenschutz`) are separate
   routes.
 - **`components/sections/`** — one component per homepage section, matched
   1:1 to a data object in `data/site.ts`. To change homepage copy, edit
@@ -36,7 +36,7 @@ Single-page marketing site (German-language, industrial services business
 
 ## Styling
 
-Tailwind v4, CSS-first config in `app/globals.css` (no `tailwind.config.*`).
+Tailwind v4, CSS-first config in `styles/globals.css` (no `tailwind.config.*`).
 
 - Theme tokens (`--background`, `--primary`, `--secondary`, `--accent`, etc.)
   are defined as a "warm concrete + harbor teal + safety orange" palette in
