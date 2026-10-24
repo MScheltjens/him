@@ -45,8 +45,8 @@ open items come up — it's not meant to be a static document.
       auto-reply email), so this section needs real legal copy, ideally
       reviewed by a lawyer, describing what's sent/stored and the GDPR legal
       basis (Art. 6 Abs. 1 lit. b DSGVO).
-- [ ] Add a `Sitemap` directive to `app/robots.ts` and generate
-      `app/sitemap.ts` once the production domain is finalized.
+- [x] Add a `Sitemap` directive to `app/robots.ts` and generate
+      `app/sitemap.ts` (both read `siteUrl`, so they follow the domain).
 - [ ] Confirm `siteUrl` in `data/site.ts` (`https://him-schneider.de`, used
       for `metadataBase`, Open Graph, and JSON-LD in `app/layout.tsx`) matches
       the real production domain once deployed.
