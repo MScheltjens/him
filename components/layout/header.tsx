@@ -18,12 +18,12 @@ export function Header() {
     return (
         <header className="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur">
             <Container className="flex h-16 items-center justify-between">
-                <Link href="/" className="flex h-full items-center py-2">
-                    <LogoMark name={site.name} tagline={site.tagline} />
+                <Link href="/" className="flex h-full min-w-0 items-center py-2">
+                    <LogoMark name={site.name} tagline={site.tagline} className="min-w-0" />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden items-center gap-8 md:flex">
+                <nav className="hidden items-center gap-8 lg:flex">
                     {navigation.items.map((item) => (
                         <Link key={item.label} href={item.href} className="text-sm font-medium text-foreground transition hover:text-primary">
                             {item.label}
@@ -32,9 +32,9 @@ export function Header() {
                 </nav>
 
                 {/* Mobile Menu & CTA */}
-                <div className="flex items-center gap-2">
+                <div className="flex shrink-0 items-center gap-2">
                     <Sheet open={open} onOpenChange={setOpen}>
-                        <SheetTrigger asChild className="md:hidden">
+                        <SheetTrigger asChild className="lg:hidden">
                             <Button variant="ghost" size="icon">
                                 <Menu className="h-5 w-5" />
                             </Button>
@@ -71,7 +71,7 @@ export function Header() {
                             </Link>
                         </SheetContent>
                     </Sheet>
-                    <Link href="#kontakt" className={cn(buttonVariants({ variant: "default" }), "rounded-full px-5 hidden md:inline-flex mr-4")}>
+                    <Link href="#kontakt" className={cn(buttonVariants({ variant: "default" }), "rounded-full px-5 hidden lg:inline-flex")}>
                         {navigation.cta}
                     </Link>
                 </div>

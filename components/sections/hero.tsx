@@ -12,7 +12,7 @@ import { ThemeImage } from "../ui/theme-image";
 
 export function Hero() {
     return (
-        <section className="relative min-h-[calc(100vh-4rem)] lg:h-[calc(100vh-4rem)] overflow-hidden border-b border-border">
+        <section className="relative flex min-h-[calc(100vh-4rem)] flex-col justify-center overflow-hidden border-b border-border">
             <ThemeImage
                 image={heroImage}
                 fill
@@ -22,7 +22,7 @@ export function Hero() {
                 className="absolute inset-0"
             />
             <div className="absolute inset-0 bg-background/80 lg:bg-linear-to-r lg:from-background/40 lg:via-background/5 lg:to-transparent" />
-            <Container className="relative z-10 flex h-full flex-col justify-center py-10 sm:py-20 ">
+            <Container className="relative z-10 py-10 sm:py-20">
                 <div className="space-y-6 sm:space-y-8">
                     <Badge className="bg-primary px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-primary-foreground">
                         {hero.badge}
@@ -46,10 +46,10 @@ export function Hero() {
                             {hero.secondaryCta}
                         </Link>
                     </div>
-                    <div className="flex flex-col gap-3 md:flex-row justify-between">
+                    <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
                         {benefits.map((item) => (
                             <div key={item} className="flex items-center gap-3 border-l-2 border-l-primary border border-border bg-background/80 px-4 py-3 shadow-sm backdrop-blur">
-                                <CheckCircle2 className="h-5 w-5 text-primary" />
+                                <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
                                 <span className="text-sm font-medium text-muted-foreground">{item}</span>
                             </div>
                         ))}
