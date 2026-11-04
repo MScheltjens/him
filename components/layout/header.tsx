@@ -60,7 +60,7 @@ export function Header() {
                                 ))}
                             </nav>
                             <Link
-                                href="#kontakt"
+                                href="/#kontakt"
                                 className={cn(buttonVariants({ variant: "default" }), "w-full rounded-full")}
                                 onClick={() => {
                                     setOpen(false);
@@ -71,7 +71,7 @@ export function Header() {
                             </Link>
                         </SheetContent>
                     </Sheet>
-                    <Link href="#kontakt" className={cn(buttonVariants({ variant: "default" }), "rounded-full px-5 hidden lg:inline-flex")}>
+                    <Link href="/#kontakt" className={cn(buttonVariants({ variant: "default" }), "rounded-full px-5 hidden lg:inline-flex")}>
                         {navigation.cta}
                     </Link>
                 </div>

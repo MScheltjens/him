@@ -18,11 +18,11 @@ export const siteTitle = "HIM - Schneider | Hamburger Industrie- und Montageserv
 
 export const navigation = {
     items: [
-        { label: "Leistungen", href: "#leistungen" },
-        { label: "Über uns", href: "#ueber-uns" },
-        { label: "Galerie", href: "#referenzen" },
-        { label: "FAQ", href: "#faq" },
-        { label: "Kontakt", href: "#kontakt" },
+        { label: "Leistungen", href: "/#leistungen" },
+        { label: "Über uns", href: "/#ueber-uns" },
+        { label: "Galerie", href: "/#referenzen" },
+        { label: "FAQ", href: "/#faq" },
+        { label: "Kontakt", href: "/#kontakt" },
     ],
     cta: "Anfrage senden",
 };

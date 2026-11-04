@@ -11,7 +11,7 @@ export default function DatenschutzPage() {
     return (
         <main className="py-16 sm:py-24">
             <Container className="max-w-3xl space-y-10">
-                <h1 className="text-3xl font-semibold tracking-tight text-secondary sm:text-4xl">Datenschutzerklärung</h1>
+                <h1 className="wrap-break-word hyphens-auto text-3xl font-semibold tracking-tight text-secondary sm:text-4xl">Datenschutzerklärung</h1>
 
                 <section className="space-y-2">
                     <h2 className="text-lg font-semibold tracking-tight text-foreground">1. Verantwortlicher</h2>
