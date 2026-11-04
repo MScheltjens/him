@@ -1,9 +1,15 @@
 import { ArrowLeft } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+    title: `Seite nicht gefunden | ${site.name}`,
+};
 
 export default function NotFound() {
     return (
