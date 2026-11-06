@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 import { useActionState } from "react";
 
 import { contactSection, site } from "@/data/site";
@@ -58,14 +59,14 @@ export function Contact() {
                                 <div className="grid gap-5 sm:grid-cols-2">
                                     <div className="space-y-2">
                                         <Label htmlFor="name">{contactSection.formLabels.name}</Label>
-                                        <Input id="name" name="name" required maxLength={100} aria-invalid={!!state.errors?.name} />
+                                        <Input id="name" name="name" defaultValue={state.values?.name} required maxLength={100} aria-invalid={!!state.errors?.name} />
                                         {state.errors?.name && (
                                             <p className="text-xs text-destructive">{state.errors.name}</p>
                                         )}
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="email">{contactSection.formLabels.email}</Label>
-                                        <Input id="email" name="email" type="email" required maxLength={254} aria-invalid={!!state.errors?.email} />
+                                        <Input id="email" name="email" type="email" defaultValue={state.values?.email} required maxLength={254} aria-invalid={!!state.errors?.email} />
                                         {state.errors?.email && (
                                             <p className="text-xs text-destructive">{state.errors.email}</p>
                                         )}
@@ -74,7 +75,7 @@ export function Contact() {
 
                                 <div className="space-y-2">
                                     <Label htmlFor="phone">{contactSection.formLabels.phone}</Label>
-                                    <Input id="phone" name="phone" type="tel" maxLength={30} aria-invalid={!!state.errors?.phone} />
+                                    <Input id="phone" name="phone" type="tel" defaultValue={state.values?.phone} maxLength={30} aria-invalid={!!state.errors?.phone} />
                                     {state.errors?.phone && (
                                         <p className="text-xs text-destructive">{state.errors.phone}</p>
                                     )}
@@ -82,7 +83,7 @@ export function Contact() {
 
                                 <div className="space-y-2">
                                     <Label htmlFor="message">{contactSection.formLabels.message}</Label>
-                                    <Textarea id="message" name="message" required maxLength={5000} aria-invalid={!!state.errors?.message} />
+                                    <Textarea id="message" name="message" defaultValue={state.values?.message} required maxLength={5000} aria-invalid={!!state.errors?.message} />
                                     {state.errors?.message && (
                                         <p className="text-xs text-destructive">{state.errors.message}</p>
                                     )}
@@ -97,6 +98,14 @@ export function Contact() {
                                 <Button type="submit" className="px-6" disabled={pending}>
                                     {pending ? "Wird gesendet..." : contactSection.formLabels.submit}
                                 </Button>
+
+                                <p className="text-xs leading-5 text-muted-foreground">
+                                    {contactSection.privacyNote}{" "}
+                                    <Link href="/datenschutz" className="underline hover:text-foreground">
+                                        {contactSection.privacyLinkLabel}
+                                    </Link>
+                                    .
+                                </p>
                             </form>
                         )}
                     </CardContent>

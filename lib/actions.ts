@@ -8,6 +8,8 @@ export type ContactState = {
     status: "idle" | "success" | "error";
     message?: string;
     errors?: Partial<Record<"name" | "email" | "phone" | "message", string>>;
+    // React resets the form after every action, so error states hand the input back.
+    values?: { name: string; email: string; phone: string; message: string };
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -34,6 +36,7 @@ export async function sendContactMessage(
     const email = String(formData.get("email") ?? "").trim();
     const phone = String(formData.get("phone") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
+    const values = { name, email, phone, message };
 
     const errors: ContactState["errors"] = {};
     if (!name) errors.name = "Bitte geben Sie Ihren Namen an.";
@@ -53,7 +56,7 @@ export async function sendContactMessage(
     else if (message.length > MAX_LENGTH.message) errors.message = `Die Nachricht darf maximal ${MAX_LENGTH.message} Zeichen lang sein.`;
 
     if (Object.keys(errors).length > 0) {
-        return { status: "error", errors };
+        return { status: "error", errors, values };
     }
 
     if (!process.env.RESEND_API_KEY) {
@@ -61,6 +64,7 @@ export async function sendContactMessage(
         return {
             status: "error",
             message: "Der Versand ist derzeit nicht verfügbar. Bitte rufen Sie uns direkt an.",
+            values,
         };
     }
 
@@ -87,23 +91,23 @@ export async function sendContactMessage(
         return {
             status: "error",
             message: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder rufen Sie uns an.",
+            values,
         };
     }
 
     // Best-effort confirmation back to the sender. The business notification above
     // already succeeded, so a failure here shouldn't turn the submission into an error
     // (and will legitimately fail in Resend's sandbox mode until a domain is verified).
+    // The address is unverified, so this must never repeat anything the visitor typed:
+    // otherwise the form could be used to send arbitrary text to third parties.
     const { error: autoReplyError } = await resend.emails.send({
         from: process.env.RESEND_FROM_EMAIL || "HIM - Schneider Kontaktformular <onboarding@resend.dev>",
         to: email,
         subject: `Ihre Anfrage bei ${site.name}`,
         text: [
-            `Hallo ${name},`,
+            "Guten Tag,",
             "",
             "vielen Dank für Ihre Anfrage. Wir haben Ihre Nachricht erhalten und melden uns zeitnah bei Ihnen.",
-            "",
-            "Ihre Nachricht:",
-            message,
             "",
             "Mit freundlichen Grüßen",
             site.name,

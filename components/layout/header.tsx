@@ -35,7 +35,7 @@ export function Header() {
                 <div className="flex shrink-0 items-center gap-2">
                     <Sheet open={open} onOpenChange={setOpen}>
                         <SheetTrigger asChild className="lg:hidden">
-                            <Button variant="ghost" size="icon">
+                            <Button variant="ghost" size="icon" aria-label={navigation.menuLabel}>
                                 <Menu className="h-5 w-5" />
                             </Button>
                         </SheetTrigger>

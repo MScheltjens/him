@@ -10,7 +10,7 @@ export type SiteImage = {
 
 export const heroImage: SiteImage = {
     id: "1755428822965-ce3d6078abdf",
-    alt: "Industrielle Krane an einer Werft in Hamburg",
+    alt: "Industrielle Krane an einer Werft",
     credit: "Julia Taubitz / Unsplash",
 };
 
