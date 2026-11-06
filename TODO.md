@@ -18,6 +18,10 @@ open items come up — it's not meant to be a static document.
       (`t.schneider@him-schneider.de`) — both currently best-guess in
       `data/site.ts`, not yet verified by the client.
 - [ ] Confirm display name "HIM - Schneider" is correct/final.
+- [ ] All site copy in `data/site.ts` is AI-written placeholder text based on
+      the client's LinkedIn profile, so none of it is a confirmed fact. It must
+      come from or be approved by the client: tagline, about text, services, service area,
+      strengths, FAQ, the "seit März 2024" dates and the hero metrics.
 - [ ] Real phone number — `+49 40 12345678` in `data/site.ts` is a placeholder
       (shown in the contact section and Impressum, and in the JSON-LD).
 - [ ] Legal form (Einzelunternehmen, GmbH, ...) — decides what the Impressum
