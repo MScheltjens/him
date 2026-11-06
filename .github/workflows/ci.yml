@@ -23,3 +23,13 @@ jobs:
       - run: pnpm typecheck
       # The contact form only needs Resend at request time, so the build runs without secrets.
       - run: pnpm build
+
+  # Separate from `build` so it doesn't block merges while client data is pending.
+  # Red means "not ready to go live". Make it a required check at launch.
+  launch-ready:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+      - name: Fail if placeholders are left
+        run: "! grep -rnE '\\[PLACEHOLDER|12345678|Platzhalter' app components data"

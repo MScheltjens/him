@@ -13,14 +13,20 @@ open items come up — it's not meant to be a static document.
 - [ ] Confirm the responsible data-protection supervisory authority for
       **Datenschutzerklärung** (`app/(site)/datenschutz/page.tsx`) — likely
       the Hamburgische Beauftragte für Datenschutz und Informationsfreiheit,
-      needs confirming.
+      needs confirming. Drafted with that authority, assuming a Hamburg seat.
 - [ ] Confirm final domain (`him-schneider.de`) and contact email
       (`t.schneider@him-schneider.de`) — both currently best-guess in
       `data/site.ts`, not yet verified by the client.
 - [ ] Confirm display name "HIM - Schneider" is correct/final.
+- [ ] Real phone number — `+49 40 12345678` in `data/site.ts` is a placeholder
+      (shown in the contact section and Impressum, and in the JSON-LD).
+- [ ] Legal form (Einzelunternehmen, GmbH, ...) — decides what the Impressum
+      must state, and whether "Geschäftsführer" in `data/site.ts` is correct.
 - [ ] Real project/business photos to replace the Unsplash stock imagery in
       `data/images.ts`, if the client has any (also used as the Open Graph
       share image via `app/layout.tsx` until a branded one exists).
+      The gallery copy is now neutral and labels them as Symbolbilder; with
+      real photos, it can go back to presenting them as references.
 - [ ] Full postal address, once confirmed, should be added to the
       `LocalBusiness` JSON-LD in `app/layout.tsx` (currently omits `address`
       since it's not confirmed yet — search engines weight this).
@@ -39,14 +45,19 @@ open items come up — it's not meant to be a static document.
       before go-live, so real submissions go to
       `t.schneider@him-schneider.de` instead of the personal test inbox.
 - [ ] Fill in Impressum/Datenschutz placeholders once client data arrives
-      (see above).
-- [ ] Datenschutzerklärung §3 (Kontaktformular) placeholder still says "once
-      the form is functional, describe..." — it now is functional (incl. an
-      auto-reply email), so this section needs real legal copy, ideally
-      reviewed by a lawyer, describing what's sent/stored and the GDPR legal
-      basis (Art. 6 Abs. 1 lit. b DSGVO).
+      (see above). The `launch-ready` CI job stays red until they're gone.
+- [ ] Have a lawyer or legal text generator review the drafted
+      Datenschutzerklärung (hosting, contact form, analytics), and check the
+      data-processing agreements with Vercel and Resend. Confirm both are
+      still listed at dataprivacyframework.gov.
 - [x] Add a `Sitemap` directive to `app/robots.ts` and generate
       `app/sitemap.ts` (both read `siteUrl`, so they follow the domain).
+- [ ] Remove the "Diese Seite ist ein Platzhalter" footnote from both legal
+      pages once they're complete.
+- [ ] Make `launch-ready` a required check in the "Protect main" ruleset.
+- [ ] Check the Vercel plan: Hobby is non-commercial only; a client site needs Pro.
+- [ ] After go-live, test the form on production end to end (delivery to the
+      client inbox, reply-to, auto-reply not in spam).
 - [ ] Confirm `siteUrl` in `data/site.ts` (`https://him-schneider.de`, used
       for `metadataBase`, Open Graph, and JSON-LD in `app/layout.tsx`) matches
       the real production domain once deployed.

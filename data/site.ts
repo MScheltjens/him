@@ -25,6 +25,7 @@ export const navigation = {
         { label: "Kontakt", href: "/#kontakt" },
     ],
     cta: "Anfrage senden",
+    menuLabel: "Menü öffnen",
 };
 
 export const footerLinks = [
@@ -113,9 +114,9 @@ export const trustSection = {
 };
 
 export const gallerySection = {
-    eyebrow: "Referenzen",
-    title: "Projekte & Einsätze",
-    text: "Einblicke in abgeschlossene Arbeiten auf Werften, in der Industrie und bei Montageprojekten im Großraum Hamburg.",
+    eyebrow: "Einsatzumfeld",
+    title: "Wo wir arbeiten",
+    text: "Werften, Produktionshallen und Montagebereiche: typische Umgebungen unserer Einsätze im Großraum Hamburg (Symbolbilder).",
     count: 6,
 };
 
@@ -162,4 +163,6 @@ export const contactSection = {
         message: "Nachricht",
         submit: "Nachricht senden",
     },
+    privacyNote: "Ihre Angaben verwenden wir nur zur Bearbeitung Ihrer Anfrage. Mehr dazu in unserer",
+    privacyLinkLabel: "Datenschutzerklärung",
 };

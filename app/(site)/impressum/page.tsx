@@ -14,7 +14,7 @@ export default function ImpressumPage() {
                 <h1 className="text-3xl font-semibold tracking-tight text-secondary sm:text-4xl">Impressum</h1>
 
                 <section className="space-y-2">
-                    <h2 className="text-lg font-semibold tracking-tight text-foreground">Angaben gemäß § 5 TMG</h2>
+                    <h2 className="text-lg font-semibold tracking-tight text-foreground">Angaben gemäß § 5 DDG</h2>
                     <p className="text-sm leading-7 text-muted-foreground">
                         [PLACEHOLDER: Vollständiger Name des Anbieters]
                         <br />
