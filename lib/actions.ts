@@ -12,7 +12,14 @@ export type ContactState = {
     values?: { name: string; email: string; phone: string; message: string };
 };
 
+// Deliberately loose, as only delivery can prove an address works: one "@", no
+// whitespace, and a dot in the domain. Allowing a single "@" also rejects lists of
+// addresses, which matters because this value is passed to Resend as a recipient.
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Checks allowed characters only (digits, "+", "-", "/", parentheses, spaces), not
+// the number's format, so national and international notations both pass. Matches
+// an empty string because the phone field is optional.
 const PHONE_RE = /^[0-9+\-/() ]*$/;
 
 const MAX_LENGTH = {
